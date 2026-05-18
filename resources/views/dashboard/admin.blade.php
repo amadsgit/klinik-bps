@@ -105,17 +105,13 @@
             </h3>
 
             <div class="space-y-3">
-
-                <a href="#"
+                <a href="#" class="block w-full text-center bg-emerald-600 text-white py-2 rounded-lg hover:bg-emerald-700 transition">
+                    + Kunjungan Baru
+                </a>
+                <a href="{{ route('pasien.create') }}"
                     class="block w-full text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">
                     + Tambah Pasien
                 </a>
-
-                <a href="#"
-                    class="block w-full text-center bg-emerald-600 text-white py-2 rounded-lg hover:bg-emerald-700 transition">
-                    + Kunjungan Baru
-                </a>
-
             </div>
         </div>
 

@@ -9,17 +9,19 @@
             <i class="ph ph-list text-2xl"></i>
         </button>
 
-        <!-- JAM (SEKARANG SELALU MUNCUL) -->
-        <div class="flex">
-            <div id="local-time" class="text-sm font-semibold text-blue-600 bg-white/60 px-3 py-1 rounded-lg">
-            </div>
-        </div>
-
     </div>
 
     <!-- RIGHT -->
     <div class="flex items-center gap-3 relative ml-auto">
-
+        <!-- JAM -->
+        <div class="flex items-center gap-2 bg-white/60 px-3 py-1 rounded-lg">
+        
+            <i class="ph ph-clock text-blue-600 text-base"></i>
+        
+            <div id="local-time" class="text-sm font-semibold text-blue-600">
+            </div>
+        
+        </div>
         <button @click="openUser = !openUser" class="flex items-center gap-3 rounded-lg hover:bg-white/50 px-2 py-1">
 
             <img src="https://ui-avatars.com/api/?name={{ urlencode(Auth::user()->name) }}&background=3B82F6&color=fff"
@@ -82,3 +84,15 @@
         </div>
     </template>
 </header>
+<script>
+    function updateTime() {
+    const el = document.getElementById('local-time');
+    if (!el) return;
+
+    const now = new Date();
+    el.innerText = now.toLocaleTimeString('id-ID');
+}
+
+setInterval(updateTime, 1000);
+updateTime();
+</script>

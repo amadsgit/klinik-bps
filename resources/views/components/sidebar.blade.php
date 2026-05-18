@@ -53,9 +53,9 @@
 
             <div x-show="open" x-collapse class="ml-3 mt-1 space-y-1">
                 <x-menu href="{{ route('pasien.index') }}" icon="ph-user" label="Pasien" />
-                <x-menu href="/obat" icon="ph-pill" label="Obat" />
-                <x-menu href="/tindakan" icon="ph-scissors" label="Tindakan" />
-                <x-menu href="/diagnosa" icon="ph-heartbeat" label="Diagnosa" />
+                <x-menu href="{{ route('obat.index') }}" icon="ph-pill" label="Obat" />
+                <x-menu href="{{ route('tindakan.index') }}" icon="ph-scissors" label="Tindakan" />
+                <x-menu href="{{ route('diagnosa.index') }}" icon="ph-heartbeat" label="Diagnosa" />
             </div>
         </div>
         @endif
@@ -160,8 +160,8 @@
             </button>
 
             <div x-show="open" x-collapse class="ml-3 mt-1 space-y-1">
-                <x-menu href="/roles" icon="ph-user-gear" label="Roles" />
-                <x-menu href="/users" icon="ph-users" label="Users" />
+                <x-menu href="{{ route('role.index') }}" icon="ph-user-gear" label="Roles" />
+                <x-menu href="{{ route('user.index') }}" icon="ph-users" label="Users" />
             </div>
         </div>
         @endif

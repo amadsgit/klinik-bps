@@ -112,7 +112,7 @@
     function confirmDelete(id) {
     Swal.fire({
     title: 'Yakin hapus?',
-    text: "Data akan dihapus permanen",
+    text: "Data akan dihapus.",
     icon: 'warning',
     showCancelButton: true,
     confirmButtonText: 'Hapus',

@@ -4,7 +4,12 @@ use App\Models\Pasien;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ObatController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\PasienController;
+use App\Http\Controllers\DiagnosaController;
+use App\Http\Controllers\TindakanController;
 use App\Http\Controllers\DashboardController;
 
 Route::middleware(['guest'])->group(function () {
@@ -37,6 +42,11 @@ Route::middleware(['auth'])->group(function () {
 
     Route::middleware('role:admin')->group(function () {
        Route::resource('pasien', PasienController::class);
+       Route::resource('obat', ObatController::class);
+       Route::resource('tindakan', TindakanController::class);
+       Route::resource('diagnosa', DiagnosaController::class);
+       Route::resource('role', RoleController::class);
+       Route::resource('user', UserController::class);
     });
 
     Route::middleware('role:dokter')->group(function () {
